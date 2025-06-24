@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NextView IPTV - خدمة البث المتميزة</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* متغيرات الألوان */
+    :root {
+      --primary: #1a73e8;
+      --secondary: #0d47a1;
+      --accent: #ff5722;
+      --dark: #121212;
+      --light: #f8f9fa;
+      --gray: #5f6368;
+      --success: #34a853;
+      --text: #333;
+    }
+
+    /* إعادة الضبط العامة */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f2f5;
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    /* الترويسة */
+    .main-header {
+      background-color: var(--dark);
+      color: #fff;
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo i {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      transition: color 0.3s;
+      padding: 8px 0;
+      position: relative;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--accent);
+      transition: width 0.3s;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .mobile-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    /* قسم البطل */
+    .hero {
+      background: linear-gradient(135deg, rgba(13, 71, 161, 0.9), rgba(26, 115, 232, 0.9)),
+                  url('https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
+      color: #fff;
+      padding: 100px 0;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .hero h2 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 32px;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      font-size: 1.1rem;
+      cursor: pointer;
+      border: none;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background-color: var(--accent);
+      color: white;
+      box-shadow: 0 4px 15px rgba(255, 87, 34, 0.3);
+    }
+
+    .btn-primary:hover {
+      background-color: #e64a19;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(255, 87, 34, 0.4);
+    }
+
+    /* قسم الميزات */
+    .features {
+      padding: 80px 0;
+      background-color: #fff;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h3 {
+      font-size: 2.2rem;
+      color: var(--dark);
+      margin-bottom: 15px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-title h3::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      right: 50%;
+      transform: translateX(50%);
+      width: 60px;
+      height: 3px;
+      background-color: var(--accent);
+    }
+
+    .section-title p {
+      color: var(--gray);
+      max-width: 600px;
+      margin: 20px auto 0;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .feature-box {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .feature-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature-icon {
+      font-size: 3rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    .feature-box h4 {
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+      color: var(--dark);
+    }
+
+    .feature-box p {
+      color: var(--gray);
+      font-size: 1rem;
+    }
+
+    /* قسم التسعير */
+    .pricing {
+      padding: 80px 0;
+      background-color: #f8f9fa;
+    }
+
+    .plans-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .plan-card {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+      position: relative;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .plan-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .plan-header {
+      background-color: var(--primary);
+      color: white;
+      padding: 25px 20px;
+      text-align: center;
+    }
+
+    .plan-card.popular .plan-header {
+      background-color: var(--accent);
+    }
+
+    .plan-card.popular::after {
+      content: 'الأكثر شعبية';
+      position: absolute;
+      top: 15px;
+      left: -30px;
+      background-color: var(--accent);
+      color: white;
+      padding: 5px 30px;
+      transform: rotate(-45deg);
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+
+    .plan-header h3 {
+      font-size: 1.6rem;
+      margin-bottom: 5px;
+    }
+
+    .plan-price {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin: 10px 0;
+    }
+
+    .plan-price span {
+      font-size: 1rem;
+      font-weight: normal;
+    }
+
+    .plan-details {
+      padding: 30px;
+    }
+
+    .plan-features {
+      list-style: none;
+      margin-bottom: 30px;
+    }
+
+    .plan-features li {
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .plan-features li:last-child {
+      border-bottom: none;
+    }
+
+    .plan-features li i {
+      color: var(--success);
+    }
+
+    /* قسم الدعوة للإجراء */
+    .cta {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .cta p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 30px;
+    }
+
+    .btn-light {
+      background-color: white;
+      color: var(--primary);
+      box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+    }
+
+    .btn-light:hover {
+      background-color: #f0f0f0;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+    }
+
+    /* التذييل */
+    footer {
+      background-color: var(--dark);
+      color: white;
+      padding: 60px 0 20px;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .footer-logo i {
+      color: var(--accent);
+    }
+
+    .footer-about p {
+      margin-bottom: 20px;
+      color: #aaa;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 15px;
+    }
+
+    .social-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      color: white;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .social-links a:hover {
+      background-color: var(--accent);
+    }
+
+    .footer-links h4 {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    .footer-links h4::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 40px;
+      height: 2px;
+      background-color: var(--accent);
+    }
+
+    .footer-links ul {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 12px;
+    }
+
+    .footer-links a {
+      color: #aaa;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+
+    .footer-contact p {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 15px;
+      color: #aaa;
+    }
+
+    .whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: #25D366;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 500;
+      margin-top: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .whatsapp-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+
+    /* التصميم المتجاوب */
+    @media (max-width: 992px) {
+      .hero h2 {
+        font-size: 2.3rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .mobile-toggle {
+        display: block;
+      }
+      
+      .nav-links {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        width: 80%;
+        height: calc(100vh - 70px);
+        background-color: var(--dark);
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 0;
+        transition: right 0.3s ease;
+        gap: 25px;
+      }
+      
+      .nav-links.active {
+        right: 0;
+      }
+      
+      .hero {
+        padding: 80px 0;
+      }
+      
+      .hero h2 {
+        font-size: 2rem;
+      }
+      
+      .hero p {
+        font-size: 1.1rem;
+      }
+      
+      .section-title h3 {
+        font-size: 1.8rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .hero h2 {
+        font-size: 1.8rem;
+      }
+      
+      .hero p {
+        font-size: 1rem;
+      }
+      
+      .btn {
+        padding: 12px 25px;
+        font-size: 1rem;
+      }
+      
+      .plan-card.popular::after {
+        left: -35px;
+        font-size: 0.7rem;
+        padding: 4px 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- الترويسة -->
+  <header class="main-header">
+    <div class="container header-container">
+      <div class="logo">
+        <i class="fas fa-tv"></i>
+        <span>NextView IPTV</span>
+      </div>
+      <button class="mobile-toggle" id="mobileToggle">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="about.html">من نحن</a></li>
+          <li><a href="pricing.html">الأسعار</a></li>
+          <li><a href="privacy.html">الخصوصية</a></li>
+          <li><a href="https://wa.me/212XXXXXXXXX" class="btn-primary" target="_blank" style="padding: 8px 20px;">اتصل بنا</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- قسم البطل -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h2>بث غير محدود. في أي وقت. في أي مكان.</h2>
+        <p>استمتع بآلاف القنوات التلفزيونية والأفلام والرياضة بدقة HD و 4K. بدون تقطيع، تفعيل فوري!</p>
+        <a href="pricing.html" class="btn btn-primary">اشترك الآن</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- قسم الميزات -->
+  <section class="features">
+    <div class="container">
+      <div class="section-title">
+        <h3>لماذا تختار NextView IPTV؟</h3>
+        <p>خدمة متميزة مع ميزات استثنائية لتحسين تجربة المشاهدة</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-box">
+          <div class="feature-icon">
+            <i class="fas fa-hd"></i>
+          </div>
+          <h4>قنوات HD و 4K</h4>
+          <p>استمتع ببث فيديو عالي الجودة من القنوات العالمية بدقة عالية ووضوح ممتاز.</p>
+        </div>
+        <div class="feature-box">
+          <div class="feature-icon">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <h4>تفعيل فوري</h4>
+          <p>احصل على اشتراكك خلال دقائق بعد الدفع بدون أي وقت انتظار.</p>
+        </div>
+        <div class="feature-box">
+          <div class="feature-icon">
+            <i class="fas fa-tags"></i>
+          </div>
+          <h4>خطط بأسعار معقولة</h4>
+          <p>3 أشهر مقابل 15$، 6 أشهر مقابل 25$، و12 شهرًا مقابل 35$ فقط. جودة متميزة بسعر مناسب.</p>
+        </div>
+        <div class="feature-box">
+          <div class="feature-icon">
+            <i class="fas fa-headset"></i>
+          </div>
+          <h4>دعم فني 24/7</h4>
+          <p>نحن دائماً متاحون لمساعدتك عبر واتساب أو البريد الإلكتروني مع أوقات استجابة سريعة.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- قسم الأسعار -->
+  <section class="pricing">
+    <div class="container">
+      <div class="section-title">
+        <h3>خطط أسعار مرنة</h3>
+        <p>اختر الخطة المثالية لاحتياجات الترفيه الخاصة بك</p>
+      </div>
+      <div class="plans-grid">
+        <div class="plan-card">
+          <div class="plan-header">
+            <h3>3 أشهر</h3>
+            <div class="plan-price">$15</div>
+            <p>مثالي للمشاهدة قصيرة المدى</p>
+          </div>
+          <div class="plan-details">
+            <ul class="plan-features">
+              <li><i class="fas fa-check"></i> 10,000+ قناة</li>
+              <li><i class="fas fa-check"></i> جودة HD و 4K</li>
+              <li><i class="fas fa-check"></i> 30,000+ فيديو عند الطلب</li>
+              <li><i class="fas fa-check"></i> دعم فني 24/7</li>
+              <li><i class="fas fa-check"></i> 3 أجهزة</li>
+            </ul>
+            <a href="#" class="btn btn-primary">اختر الخطة</a>
+          </div>
+        </div>
+        
+        <div class="plan-card popular">
+          <div class="plan-header">
+            <h3>6 أشهر</h3>
+            <div class="plan-price">$25</div>
+            <p>أفضل قيمة مقابل المال</p>
+          </div>
+          <div class="plan-details">
+            <ul class="plan-features">
+              <li><i class="fas fa-check"></i> 15,000+ قناة</li>
+              <li><i class="fas fa-check"></i> جودة HD و 4K</li>
+              <li><i class="fas fa-check"></i> 50,000+ فيديو عند الطلب</li>
+              <li><i class="fas fa-check"></i> دعم فني متميز</li>
+              <li><i class="fas fa-check"></i> 5 أجهزة</li>
+              <li><i class="fas fa-check"></i> خاصية الرجوع بالزمن</li>
+            </ul>
+            <a href="#" class="btn btn-primary">اختر الخطة</a>
+          </div>
+        </div>
+        
+        <div class="plan-card">
+          <div class="plan-header">
+            <h3>12 شهر</h3>
+            <div class="plan-price">$35</div>
+            <p>الحزمة الترفيهية المثالية</p>
+          </div>
+          <div class="plan-details">
+            <ul class="plan-features">
+              <li><i class="fas fa-check"></i> 20,000+ قناة</li>
+              <li><i class="fas fa-check"></i> جودة HD و 4K</li>
+              <li><i class="fas fa-check"></i> 80,000+ فيديو عند الطلب</li>
+              <li><i class="fas fa-check"></i> دعم فني مميز</li>
+              <li><i class="fas fa-check"></i> 8 أجهزة</li>
+              <li><i class="fas fa-check"></i> خاصية الرجوع بالزمن</li>
+              <li><i class="fas fa-check"></i> قنوات حصرية</li>
+            </ul>
+            <a href="#" class="btn btn-primary">اختر الخطة</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- دعوة للاشتراك -->
+  <section class="cta">
+    <div class="container">
+      <h2>هل أنت مستعد للبدء في المشاهدة؟</h2>
+      <p>اشترك اليوم واختبر خدمة IPTV المتميزة مع جودة لا تقبل المنافسة ودعم فني متميز</p>
+      <a href="pricing.html" class="btn btn-light">ابدأ الآن</a>
+    </div>
+  </section>
+
+  <!-- التذييل -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-about">
+          <div class="footer-logo">
+            <i class="fas fa-tv"></i>
+            <span>NextView IPTV</span>
+          </div>
+          <p>مزود خدمة IPTV متميز يقدم آلاف القنوات بدقة HD و 4K مع بث موثوق ودعم فني استثنائي.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <h4>روابط سريعة</h4>
+          <ul>
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="about.html">من نحن</a></li>
+            <li><a href="pricing.html">خطط الأسعار</a></li>
+            <li><a href="privacy.html">سياسة الخصوصية</a></li>
+            <li><a href="terms.html">شروط الخدمة</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>موارد</h4>
+          <ul>
+            <li><a href="setup.html">دليل الإعداد</a></li>
+            <li><a href="channels.html">قائمة القنوات</a></li>
+            <li><a href="troubleshooting.html">استكشاف الأخطاء</a></li>
+            <li><a href="blog.html">مدونة IPTV</a></li>
+            <li><a href="faq.html">الأسئلة الشائعة</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact">
+          <h4>اتصل بنا</h4>
+          <p><i class="fas fa-envelope"></i> support@nextviewiptv.com</p>
+          <p><i class="fas fa-phone"></i> +212-XXX-XXXXXX</p>
+          <p><i class="fas fa-map-marker-alt"></i> الدار البيضاء، المغرب</p>
+          <a href="https://wa.me/212XXXXXXXXX" class="whatsapp-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i> الدعم عبر واتساب
+          </a>
+        </div>
+      </div>
+      
+      <div class="copyright">
+        <p>&copy; 2025 NextView IPTV. جميع الحقوق محفوظة.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // تبديل القائمة في الأجهزة المحمولة
+    document.getElementById('mobileToggle').addEventListener('click', function() {
+      document.getElementById('navLinks').classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
