@@ -1,12 +1,19 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NextView IPTV - خدمة البث المتميزة</title>
+  <title>NextView IPTV - Premium Streaming Service</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    /* متغيرات الألوان */
+    /* Reset CSS */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
     :root {
       --primary: #1a73e8;
       --secondary: #0d47a1;
@@ -15,14 +22,7 @@
       --light: #f8f9fa;
       --gray: #5f6368;
       --success: #34a853;
-      --text: #333;
-    }
-
-    /* إعادة الضبط العامة */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+      --whatsapp: #25D366;
     }
 
     html {
@@ -30,9 +30,8 @@
     }
 
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #f0f2f5;
-      color: var(--text);
+      color: #333;
       line-height: 1.6;
       overflow-x: hidden;
     }
@@ -44,7 +43,7 @@
       padding: 0 15px;
     }
 
-    /* الترويسة */
+    /* Header Styles */
     .main-header {
       background-color: var(--dark);
       color: #fff;
@@ -97,7 +96,7 @@
       content: '';
       position: absolute;
       bottom: 0;
-      right: 0;
+      left: 0;
       width: 0;
       height: 2px;
       background-color: var(--accent);
@@ -117,7 +116,7 @@
       cursor: pointer;
     }
 
-    /* قسم البطل */
+    /* Hero Section */
     .hero {
       background: linear-gradient(135deg, rgba(13, 71, 161, 0.9), rgba(26, 115, 232, 0.9)),
                   url('https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
@@ -171,7 +170,7 @@
       box-shadow: 0 6px 20px rgba(255, 87, 34, 0.4);
     }
 
-    /* قسم الميزات */
+    /* Features Section */
     .features {
       padding: 80px 0;
       background-color: #fff;
@@ -194,8 +193,8 @@
       content: '';
       position: absolute;
       bottom: -10px;
-      right: 50%;
-      transform: translateX(50%);
+      left: 50%;
+      transform: translateX(-50%);
       width: 60px;
       height: 3px;
       background-color: var(--accent);
@@ -245,7 +244,7 @@
       font-size: 1rem;
     }
 
-    /* قسم التسعير */
+    /* Pricing Section */
     .pricing {
       padding: 80px 0;
       background-color: #f8f9fa;
@@ -283,14 +282,14 @@
     }
 
     .plan-card.popular::after {
-      content: 'الأكثر شعبية';
+      content: 'MOST POPULAR';
       position: absolute;
       top: 15px;
-      left: -30px;
+      right: -30px;
       background-color: var(--accent);
       color: white;
       padding: 5px 30px;
-      transform: rotate(-45deg);
+      transform: rotate(45deg);
       font-size: 0.8rem;
       font-weight: bold;
     }
@@ -336,7 +335,80 @@
       color: var(--success);
     }
 
-    /* قسم الدعوة للإجراء */
+    /* Payment Section */
+    .payment-section {
+      padding: 60px 0;
+      background-color: white;
+      text-align: center;
+    }
+    
+    .payment-methods {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+    
+    .payment-method {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 200px;
+    }
+    
+    .payment-icon {
+      font-size: 3.5rem;
+      color: #253b80;
+      margin-bottom: 15px;
+    }
+    
+    /* PayPal Forms */
+    .paypal-form {
+      margin-top: 20px;
+    }
+    
+    .paypal-email {
+      font-size: 0.9rem;
+      margin-top: 10px;
+      color: #666;
+    }
+
+    /* WhatsApp Section */
+    .whatsapp-section {
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      color: white;
+      padding: 80px 0;
+      text-align: center;
+    }
+    
+    .whatsapp-container {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background-color: white;
+      color: #25D366;
+      padding: 15px 35px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.2rem;
+      margin-top: 30px;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .whatsapp-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    /* CTA Section */
     .cta {
       background: linear-gradient(135deg, var(--primary), var(--secondary));
       color: white;
@@ -367,7 +439,107 @@
       box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
     }
 
-    /* التذييل */
+    /* Testimonials */
+    .testimonials {
+      padding: 80px 0;
+      background-color: #fff;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .testimonial {
+      background: #f8f9fa;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .testimonial-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .testimonial-avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-right: 15px;
+    }
+
+    .testimonial-info h4 {
+      font-size: 1.2rem;
+      margin-bottom: 5px;
+    }
+
+    .testimonial-info p {
+      color: var(--gray);
+      font-size: 0.9rem;
+    }
+
+    .testimonial-rating {
+      color: #ffc107;
+      margin-bottom: 15px;
+    }
+
+    /* FAQ Section */
+    .faq {
+      padding: 80px 0;
+      background-color: #f8f9fa;
+    }
+
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      margin-bottom: 20px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .faq-question {
+      background-color: white;
+      padding: 20px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-answer {
+      background-color: #fff;
+      padding: 0 20px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+
+    .faq-answer p {
+      padding: 20px 0;
+      border-top: 1px solid #eee;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 500px;
+    }
+
+    /* Footer */
     footer {
       background-color: var(--dark);
       color: white;
@@ -432,7 +604,7 @@
       content: '';
       position: absolute;
       bottom: 0;
-      right: 0;
+      left: 0;
       width: 40px;
       height: 2px;
       background-color: var(--accent);
@@ -464,11 +636,11 @@
       color: #aaa;
     }
 
-    .whatsapp-btn {
+    .footer-whatsapp-btn {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background-color: #25D366;
+      background-color: var(--whatsapp);
       color: white;
       padding: 12px 25px;
       border-radius: 30px;
@@ -478,7 +650,7 @@
       transition: transform 0.3s, box-shadow 0.3s;
     }
 
-    .whatsapp-btn:hover {
+    .footer-whatsapp-btn:hover {
       transform: translateY(-3px);
       box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
     }
@@ -491,7 +663,7 @@
       font-size: 0.9rem;
     }
 
-    /* التصميم المتجاوب */
+    /* Responsive Design */
     @media (max-width: 992px) {
       .hero h2 {
         font-size: 2.3rem;
@@ -506,19 +678,19 @@
       .nav-links {
         position: fixed;
         top: 70px;
-        right: -100%;
+        left: -100%;
         width: 80%;
         height: calc(100vh - 70px);
         background-color: var(--dark);
         flex-direction: column;
         align-items: center;
         padding: 40px 0;
-        transition: right 0.3s ease;
+        transition: left 0.3s ease;
         gap: 25px;
       }
       
       .nav-links.active {
-        right: 0;
+        left: 0;
       }
       
       .hero {
@@ -535,6 +707,11 @@
       
       .section-title h3 {
         font-size: 1.8rem;
+      }
+      
+      .payment-methods {
+        flex-direction: column;
+        align-items: center;
       }
     }
 
@@ -553,7 +730,7 @@
       }
       
       .plan-card.popular::after {
-        left: -35px;
+        right: -35px;
         font-size: 0.7rem;
         padding: 4px 25px;
       }
@@ -561,7 +738,7 @@
   </style>
 </head>
 <body>
-  <!-- الترويسة -->
+  <!-- Header -->
   <header class="main-header">
     <div class="container header-container">
       <div class="logo">
@@ -573,145 +750,350 @@
       </button>
       <nav>
         <ul class="nav-links" id="navLinks">
-          <li><a href="index.html">الرئيسية</a></li>
-          <li><a href="about.html">من نحن</a></li>
-          <li><a href="pricing.html">الأسعار</a></li>
-          <li><a href="privacy.html">الخصوصية</a></li>
-          <li><a href="https://wa.me/212XXXXXXXXX" class="btn-primary" target="_blank" style="padding: 8px 20px;">اتصل بنا</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="https://wa.me/212644680614" class="btn-primary" target="_blank" style="padding: 8px 20px;">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- قسم البطل -->
+  <!-- Hero Section -->
   <section class="hero">
     <div class="container">
       <div class="hero-content">
-        <h2>بث غير محدود. في أي وقت. في أي مكان.</h2>
-        <p>استمتع بآلاف القنوات التلفزيونية والأفلام والرياضة بدقة HD و 4K. بدون تقطيع، تفعيل فوري!</p>
-        <a href="pricing.html" class="btn btn-primary">اشترك الآن</a>
+        <h2>Unlimited Streaming. Anytime. Anywhere.</h2>
+        <p>Enjoy thousands of TV channels, movies, and sports in HD & 4K. No buffering, instant activation!</p>
+        <a href="pricing.html" class="btn btn-primary">Subscribe Now</a>
       </div>
     </div>
   </section>
 
-  <!-- قسم الميزات -->
+  <!-- Features Section -->
   <section class="features">
     <div class="container">
       <div class="section-title">
-        <h3>لماذا تختار NextView IPTV؟</h3>
-        <p>خدمة متميزة مع ميزات استثنائية لتحسين تجربة المشاهدة</p>
+        <h3>Why Choose NextView IPTV?</h3>
+        <p>Premium service with exceptional features to enhance your viewing experience</p>
       </div>
       <div class="features-grid">
         <div class="feature-box">
           <div class="feature-icon">
             <i class="fas fa-hd"></i>
           </div>
-          <h4>قنوات HD و 4K</h4>
-          <p>استمتع ببث فيديو عالي الجودة من القنوات العالمية بدقة عالية ووضوح ممتاز.</p>
+          <h4>HD & 4K Channels</h4>
+          <p>Enjoy top-quality video streaming from worldwide channels with crystal-clear resolution.</p>
         </div>
         <div class="feature-box">
           <div class="feature-icon">
             <i class="fas fa-bolt"></i>
           </div>
-          <h4>تفعيل فوري</h4>
-          <p>احصل على اشتراكك خلال دقائق بعد الدفع بدون أي وقت انتظار.</p>
+          <h4>Instant Activation</h4>
+          <p>Get access to your subscription within minutes after payment with no waiting time.</p>
         </div>
         <div class="feature-box">
           <div class="feature-icon">
             <i class="fas fa-tags"></i>
           </div>
-          <h4>خطط بأسعار معقولة</h4>
-          <p>3 أشهر مقابل 15$، 6 أشهر مقابل 25$، و12 شهرًا مقابل 35$ فقط. جودة متميزة بسعر مناسب.</p>
+          <h4>Affordable Plans</h4>
+          <p>3 months for $15, 6 months for $25, and 12 months for $35 only. Premium quality at budget price.</p>
         </div>
         <div class="feature-box">
           <div class="feature-icon">
             <i class="fas fa-headset"></i>
           </div>
-          <h4>دعم فني 24/7</h4>
-          <p>نحن دائماً متاحون لمساعدتك عبر واتساب أو البريد الإلكتروني مع أوقات استجابة سريعة.</p>
+          <h4>24/7 Support</h4>
+          <p>We are always available to help you via WhatsApp or email with quick response times.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- قسم الأسعار -->
+  <!-- Pricing Section -->
   <section class="pricing">
     <div class="container">
       <div class="section-title">
-        <h3>خطط أسعار مرنة</h3>
-        <p>اختر الخطة المثالية لاحتياجات الترفيه الخاصة بك</p>
+        <h3>Flexible Pricing Plans</h3>
+        <p>Choose the perfect plan for your entertainment needs</p>
       </div>
       <div class="plans-grid">
+        <!-- 3 Months Plan -->
         <div class="plan-card">
           <div class="plan-header">
-            <h3>3 أشهر</h3>
+            <h3>3 Months</h3>
             <div class="plan-price">$15</div>
-            <p>مثالي للمشاهدة قصيرة المدى</p>
+            <p>Perfect for short-term viewing</p>
           </div>
           <div class="plan-details">
             <ul class="plan-features">
-              <li><i class="fas fa-check"></i> 10,000+ قناة</li>
-              <li><i class="fas fa-check"></i> جودة HD و 4K</li>
-              <li><i class="fas fa-check"></i> 30,000+ فيديو عند الطلب</li>
-              <li><i class="fas fa-check"></i> دعم فني 24/7</li>
-              <li><i class="fas fa-check"></i> 3 أجهزة</li>
+              <li><i class="fas fa-check"></i> 10,000+ Channels</li>
+              <li><i class="fas fa-check"></i> HD & 4K Quality</li>
+              <li><i class="fas fa-check"></i> 30,000+ VOD</li>
+              <li><i class="fas fa-check"></i> 24/7 Support</li>
+              <li><i class="fas fa-check"></i> 3 Devices</li>
             </ul>
-            <a href="#" class="btn btn-primary">اختر الخطة</a>
+            <div class="paypal-form">
+              <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                <input type="hidden" name="cmd" value="_xclick">
+                <input type="hidden" name="business" value="boutghradm@gmail.com">
+                <input type="hidden" name="item_name" value="NextView IPTV - 3 Months Subscription">
+                <input type="hidden" name="amount" value="15.00">
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="hidden" name="no_shipping" value="1">
+                <input type="hidden" name="return" value="https://yourdomain.com/thanks.html">
+                <input type="hidden" name="cancel_return" value="https://yourdomain.com/cancel.html">
+                <input type="submit" value="Buy Now with PayPal" class="btn btn-primary">
+              </form>
+              <div class="paypal-email">
+                Payments to: boutghradm@gmail.com
+              </div>
+            </div>
           </div>
         </div>
         
+        <!-- 6 Months Plan -->
         <div class="plan-card popular">
           <div class="plan-header">
-            <h3>6 أشهر</h3>
+            <h3>6 Months</h3>
             <div class="plan-price">$25</div>
-            <p>أفضل قيمة مقابل المال</p>
+            <p>Best value package</p>
           </div>
           <div class="plan-details">
             <ul class="plan-features">
-              <li><i class="fas fa-check"></i> 15,000+ قناة</li>
-              <li><i class="fas fa-check"></i> جودة HD و 4K</li>
-              <li><i class="fas fa-check"></i> 50,000+ فيديو عند الطلب</li>
-              <li><i class="fas fa-check"></i> دعم فني متميز</li>
-              <li><i class="fas fa-check"></i> 5 أجهزة</li>
-              <li><i class="fas fa-check"></i> خاصية الرجوع بالزمن</li>
+              <li><i class="fas fa-check"></i> 15,000+ Channels</li>
+              <li><i class="fas fa-check"></i> HD & 4K Quality</li>
+              <li><i class="fas fa-check"></i> 50,000+ VOD</li>
+              <li><i class="fas fa-check"></i> Premium Support</li>
+              <li><i class="fas fa-check"></i> 5 Devices</li>
+              <li><i class="fas fa-check"></i> Catch-up TV</li>
             </ul>
-            <a href="#" class="btn btn-primary">اختر الخطة</a>
+            <div class="paypal-form">
+              <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                <input type="hidden" name="cmd" value="_xclick">
+                <input type="hidden" name="business" value="boutghradm@gmail.com">
+                <input type="hidden" name="item_name" value="NextView IPTV - 6 Months Subscription">
+                <input type="hidden" name="amount" value="25.00">
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="hidden" name="no_shipping" value="1">
+                <input type="hidden" name="return" value="https://yourdomain.com/thanks.html">
+                <input type="hidden" name="cancel_return" value="https://yourdomain.com/cancel.html">
+                <input type="submit" value="Buy Now with PayPal" class="btn btn-primary">
+              </form>
+              <div class="paypal-email">
+                Payments to: boutghradm@gmail.com
+              </div>
+            </div>
           </div>
         </div>
         
+        <!-- 12 Months Plan -->
         <div class="plan-card">
           <div class="plan-header">
-            <h3>12 شهر</h3>
+            <h3>12 Months</h3>
             <div class="plan-price">$35</div>
-            <p>الحزمة الترفيهية المثالية</p>
+            <p>Ultimate entertainment package</p>
           </div>
           <div class="plan-details">
             <ul class="plan-features">
-              <li><i class="fas fa-check"></i> 20,000+ قناة</li>
-              <li><i class="fas fa-check"></i> جودة HD و 4K</li>
-              <li><i class="fas fa-check"></i> 80,000+ فيديو عند الطلب</li>
-              <li><i class="fas fa-check"></i> دعم فني مميز</li>
-              <li><i class="fas fa-check"></i> 8 أجهزة</li>
-              <li><i class="fas fa-check"></i> خاصية الرجوع بالزمن</li>
-              <li><i class="fas fa-check"></i> قنوات حصرية</li>
+              <li><i class="fas fa-check"></i> 20,000+ Channels</li>
+              <li><i class="fas fa-check"></i> HD & 4K Quality</li>
+              <li><i class="fas fa-check"></i> 80,000+ VOD</li>
+              <li><i class="fas fa-check"></i> Priority Support</li>
+              <li><i class="fas fa-check"></i> 8 Devices</li>
+              <li><i class="fas fa-check"></i> Catch-up TV</li>
+              <li><i class="fas fa-check"></i> Exclusive Channels</li>
             </ul>
-            <a href="#" class="btn btn-primary">اختر الخطة</a>
+            <div class="paypal-form">
+              <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                <input type="hidden" name="cmd" value="_xclick">
+                <input type="hidden" name="business" value="boutghradm@gmail.com">
+                <input type="hidden" name="item_name" value="NextView IPTV - 12 Months Subscription">
+                <input type="hidden" name="amount" value="35.00">
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="hidden" name="no_shipping" value="1">
+                <input type="hidden" name="return" value="https://yourdomain.com/thanks.html">
+                <input type="hidden" name="cancel_return" value="https://yourdomain.com/cancel.html">
+                <input type="submit" value="Buy Now with PayPal" class="btn btn-primary">
+              </form>
+              <div class="paypal-email">
+                Payments to: boutghradm@gmail.com
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- دعوة للاشتراك -->
-  <section class="cta">
+  <!-- Payment Section -->
+  <section class="payment-section">
     <div class="container">
-      <h2>هل أنت مستعد للبدء في المشاهدة؟</h2>
-      <p>اشترك اليوم واختبر خدمة IPTV المتميزة مع جودة لا تقبل المنافسة ودعم فني متميز</p>
-      <a href="pricing.html" class="btn btn-light">ابدأ الآن</a>
+      <div class="section-title">
+        <h3>Secure Payment Methods</h3>
+        <p>We offer safe and secure payment options for your convenience</p>
+      </div>
+      <div class="payment-methods">
+        <div class="payment-method">
+          <i class="fab fa-paypal payment-icon"></i>
+          <h4>PayPal</h4>
+          <p>Safe and secure payment processing</p>
+        </div>
+        <div class="payment-method">
+          <i class="fab fa-cc-visa payment-icon" style="color: #1a1f71;"></i>
+          <h4>Credit/Debit Cards</h4>
+          <p>Visa, Mastercard, American Express</p>
+        </div>
+        <div class="payment-method">
+          <i class="fab fa-bitcoin payment-icon" style="color: #f2a900;"></i>
+          <h4>Cryptocurrency</h4>
+          <p>Bitcoin, Ethereum, USDT</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- التذييل -->
+  <!-- WhatsApp Section -->
+  <section class="whatsapp-section">
+    <div class="container">
+      <div class="whatsapp-container">
+        <h2>24/7 Customer Support</h2>
+        <p>Our team is always ready to assist you with any questions or issues you may have. Contact us directly on WhatsApp for instant support.</p>
+        <a href="https://wa.me/212644680614" class="whatsapp-btn" target="_blank">
+          <i class="fab fa-whatsapp"></i> Chat with us on WhatsApp: +212644680614
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-title">
+        <h3>What Our Customers Say</h3>
+        <p>Join thousands of satisfied customers worldwide</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial">
+          <div class="testimonial-header">
+            <div class="testimonial-avatar">MJ</div>
+            <div class="testimonial-info">
+              <h4>Mohamed J.</h4>
+              <p>Premium Subscriber</p>
+            </div>
+          </div>
+          <div class="testimonial-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p>"The picture quality is exceptional and the channel selection is massive. Customer service is responsive and helpful. Highly recommended!"</p>
+        </div>
+        
+        <div class="testimonial">
+          <div class="testimonial-header">
+            <div class="testimonial-avatar">AS</div>
+            <div class="testimonial-info">
+              <h4>Aisha S.</h4>
+              <p>Family Plan User</p>
+            </div>
+          </div>
+          <div class="testimonial-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <p>"We've been using NextView for 6 months now and it's been flawless. The multi-device support is perfect for our family. Great value for money!"</p>
+        </div>
+        
+        <div class="testimonial">
+          <div class="testimonial-header">
+            <div class="testimonial-avatar">RK</div>
+            <div class="testimonial-info">
+              <h4>Robert K.</h4>
+              <p>Sports Enthusiast</p>
+            </div>
+          </div>
+          <div class="testimonial-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p>"As a sports fan, I'm blown away by the coverage. All major leagues, HD quality with no buffering. The 4K sports channels are amazing!"</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq">
+    <div class="container">
+      <div class="section-title">
+        <h3>Frequently Asked Questions</h3>
+        <p>Find answers to common questions about our service</p>
+      </div>
+      <div class="faq-container">
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>What devices are supported?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>NextView IPTV works on all major devices including Smart TVs (Samsung, LG, Android TV), set-top boxes (Formuler, MAG), streaming devices (Amazon Fire Stick, NVIDIA Shield), mobile devices (Android, iOS), and computers (Windows, Mac).</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>How quickly will I get access after payment?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>We provide instant activation for most payment methods. You'll typically receive your login credentials within 5-10 minutes after payment confirmation. For PayPal payments, activation is immediate upon successful payment.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>What payment methods do you accept?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>We accept all major credit/debit cards through PayPal. We also accept direct bank transfers and cryptocurrency (Bitcoin, Ethereum) for added privacy. Contact us for alternative payment options.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Do you offer free trials?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>We offer a 24-hour trial for $1 to verify our service quality and compatibility with your devices. This nominal fee helps prevent abuse of our trial system while giving you full access to evaluate our service.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>How can I contact customer support?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Our customer support team is available 24/7 via WhatsApp at +212644680614. You can also reach us by email at support@nextviewiptv.com. Average response time is under 15 minutes during peak hours.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
     <div class="container">
       <div class="footer-content">
@@ -720,7 +1102,7 @@
             <i class="fas fa-tv"></i>
             <span>NextView IPTV</span>
           </div>
-          <p>مزود خدمة IPTV متميز يقدم آلاف القنوات بدقة HD و 4K مع بث موثوق ودعم فني استثنائي.</p>
+          <p>Premium IPTV service provider offering thousands of HD and 4K channels with reliable streaming and exceptional customer support.</p>
           <div class="social-links">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
@@ -730,48 +1112,67 @@
         </div>
         
         <div class="footer-links">
-          <h4>روابط سريعة</h4>
+          <h4>Quick Links</h4>
           <ul>
-            <li><a href="index.html">الرئيسية</a></li>
-            <li><a href="about.html">من نحن</a></li>
-            <li><a href="pricing.html">خطط الأسعار</a></li>
-            <li><a href="privacy.html">سياسة الخصوصية</a></li>
-            <li><a href="terms.html">شروط الخدمة</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="pricing.html">Pricing Plans</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
           </ul>
         </div>
         
         <div class="footer-links">
-          <h4>موارد</h4>
+          <h4>Resources</h4>
           <ul>
-            <li><a href="setup.html">دليل الإعداد</a></li>
-            <li><a href="channels.html">قائمة القنوات</a></li>
-            <li><a href="troubleshooting.html">استكشاف الأخطاء</a></li>
-            <li><a href="blog.html">مدونة IPTV</a></li>
-            <li><a href="faq.html">الأسئلة الشائعة</a></li>
+            <li><a href="setup.html">Setup Guides</a></li>
+            <li><a href="channels.html">Channel List</a></li>
+            <li><a href="troubleshooting.html">Troubleshooting</a></li>
+            <li><a href="blog.html">IPTV Blog</a></li>
+            <li><a href="faq.html">FAQ</a></li>
           </ul>
         </div>
         
         <div class="footer-contact">
-          <h4>اتصل بنا</h4>
+          <h4>Contact Us</h4>
           <p><i class="fas fa-envelope"></i> support@nextviewiptv.com</p>
-          <p><i class="fas fa-phone"></i> +212-XXX-XXXXXX</p>
-          <p><i class="fas fa-map-marker-alt"></i> الدار البيضاء، المغرب</p>
-          <a href="https://wa.me/212XXXXXXXXX" class="whatsapp-btn" target="_blank">
-            <i class="fab fa-whatsapp"></i> الدعم عبر واتساب
+          <p><i class="fas fa-phone"></i> +212644680614</p>
+          <p><i class="fas fa-map-marker-alt"></i> Casablanca, Morocco</p>
+          <a href="https://wa.me/212644680614" class="footer-whatsapp-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i> WhatsApp Support
           </a>
         </div>
       </div>
       
       <div class="copyright">
-        <p>&copy; 2025 NextView IPTV. جميع الحقوق محفوظة.</p>
+        <p>&copy; 2025 NextView IPTV. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
   <script>
-    // تبديل القائمة في الأجهزة المحمولة
+    // Mobile navigation toggle
     document.getElementById('mobileToggle').addEventListener('click', function() {
       document.getElementById('navLinks').classList.toggle('active');
+    });
+    
+    // FAQ accordion functionality
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      question.addEventListener('click', () => {
+        item.classList.toggle('active');
+      });
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
     });
   </script>
 </body>
