@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NextView IPTV - Premium Streaming Service</title>
+  <title>NextView IPTV - Complete Pages</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    /* Reset CSS */
+    /* All the CSS from your original site */
     * {
       margin: 0;
       padding: 0;
@@ -735,6 +735,210 @@
         padding: 4px 25px;
       }
     }
+
+    /* New Page Styles */
+    .page-header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      padding: 100px 0 60px;
+      text-align: center;
+    }
+    
+    .page-content {
+      padding: 80px 0;
+      background-color: white;
+    }
+    
+    .page-section {
+      margin-bottom: 60px;
+    }
+    
+    .page-section:last-child {
+      margin-bottom: 0;
+    }
+    
+    .page-section h2 {
+      font-size: 2rem;
+      margin-bottom: 25px;
+      color: var(--dark);
+      position: relative;
+      padding-bottom: 15px;
+    }
+    
+    .page-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background-color: var(--accent);
+    }
+    
+    .page-section p {
+      margin-bottom: 20px;
+      line-height: 1.8;
+    }
+    
+    .page-section ul {
+      margin-left: 30px;
+      margin-bottom: 20px;
+    }
+    
+    .page-section li {
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 20px;
+    }
+    
+    .page-section li::before {
+      content: '\f00c';
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      position: absolute;
+      left: 0;
+      top: 2px;
+      color: var(--success);
+    }
+    
+    .setup-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    
+    .setup-step {
+      background: #f8f9fa;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    .step-number {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 40px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    
+    .channel-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    
+    .channel-category {
+      background: #f8f9fa;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    .channel-category h3 {
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+      color: var(--primary);
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--accent);
+    }
+    
+    .channel-list {
+      list-style: none;
+    }
+    
+    .channel-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .channel-list li:last-child {
+      border-bottom: none;
+    }
+    
+    .channel-list li i {
+      color: var(--accent);
+    }
+    
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    
+    .blog-post {
+      background: #f8f9fa;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s;
+    }
+    
+    .blog-post:hover {
+      transform: translateY(-10px);
+    }
+    
+    .blog-image {
+      height: 200px;
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .blog-content {
+      padding: 25px;
+    }
+    
+    .blog-date {
+      color: var(--accent);
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+      display: block;
+    }
+    
+    .blog-content h3 {
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+    }
+    
+    .blog-excerpt {
+      margin-bottom: 15px;
+    }
+    
+    .read-more {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+    
+    .troubleshooting-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    
+    .troubleshooting-card {
+      background: #f8f9fa;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    .troubleshooting-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+      color: var(--primary);
+    }
   </style>
 </head>
 <body>
@@ -750,343 +954,847 @@
       </button>
       <nav>
         <ul class="nav-links" id="navLinks">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#privacy">Privacy</a></li>
+          <li><a href="#terms">Terms</a></li>
+          <li><a href="#resources">Resources</a></li>
           <li><a href="https://wa.me/212644680614" class="btn-primary" target="_blank" style="padding: 8px 20px;">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-content">
-        <h2>Unlimited Streaming. Anytime. Anywhere.</h2>
-        <p>Enjoy thousands of TV channels, movies, and sports in HD & 4K. No buffering, instant activation!</p>
-        <a href="pricing.html" class="btn btn-primary">Subscribe Now</a>
+  <!-- Home Page -->
+  <section id="home">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h2>Unlimited Streaming. Anytime. Anywhere.</h2>
+          <p>Enjoy thousands of TV channels, movies, and sports in HD & 4K. No buffering, instant activation!</p>
+          <a href="#pricing" class="btn btn-primary">Subscribe Now</a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Features Section -->
-  <section class="features">
-    <div class="container">
-      <div class="section-title">
-        <h3>Why Choose NextView IPTV?</h3>
-        <p>Premium service with exceptional features to enhance your viewing experience</p>
+    <!-- Features Section -->
+    <section class="features">
+      <div class="container">
+        <div class="section-title">
+          <h3>Why Choose NextView IPTV?</h3>
+          <p>Premium service with exceptional features to enhance your viewing experience</p>
+        </div>
+        <div class="features-grid">
+          <div class="feature-box">
+            <div class="feature-icon">
+              <i class="fas fa-hd"></i>
+            </div>
+            <h4>HD & 4K Channels</h4>
+            <p>Enjoy top-quality video streaming from worldwide channels with crystal-clear resolution.</p>
+          </div>
+          <div class="feature-box">
+            <div class="feature-icon">
+              <i class="fas fa-bolt"></i>
+            </div>
+            <h4>Instant Activation</h4>
+            <p>Get access to your subscription within minutes after payment with no waiting time.</p>
+          </div>
+          <div class="feature-box">
+            <div class="feature-icon">
+              <i class="fas fa-tags"></i>
+            </div>
+            <h4>Affordable Plans</h4>
+            <p>3 months for $15, 6 months for $25, and 12 months for $35 only. Premium quality at budget price.</p>
+          </div>
+          <div class="feature-box">
+            <div class="feature-icon">
+              <i class="fas fa-headset"></i>
+            </div>
+            <h4>24/7 Support</h4>
+            <p>We are always available to help you via WhatsApp or email with quick response times.</p>
+          </div>
+        </div>
       </div>
-      <div class="features-grid">
-        <div class="feature-box">
-          <div class="feature-icon">
-            <i class="fas fa-hd"></i>
-          </div>
-          <h4>HD & 4K Channels</h4>
-          <p>Enjoy top-quality video streaming from worldwide channels with crystal-clear resolution.</p>
-        </div>
-        <div class="feature-box">
-          <div class="feature-icon">
-            <i class="fas fa-bolt"></i>
-          </div>
-          <h4>Instant Activation</h4>
-          <p>Get access to your subscription within minutes after payment with no waiting time.</p>
-        </div>
-        <div class="feature-box">
-          <div class="feature-icon">
-            <i class="fas fa-tags"></i>
-          </div>
-          <h4>Affordable Plans</h4>
-          <p>3 months for $15, 6 months for $25, and 12 months for $35 only. Premium quality at budget price.</p>
-        </div>
-        <div class="feature-box">
-          <div class="feature-icon">
-            <i class="fas fa-headset"></i>
-          </div>
-          <h4>24/7 Support</h4>
-          <p>We are always available to help you via WhatsApp or email with quick response times.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Pricing Section -->
-  <section class="pricing">
-    <div class="container">
-      <div class="section-title">
-        <h3>Flexible Pricing Plans</h3>
-        <p>Choose the perfect plan for your entertainment needs</p>
-      </div>
-      <div class="plans-grid">
-        <!-- 3 Months Plan -->
-        <div class="plan-card">
-          <div class="plan-header">
-            <h3>3 Months</h3>
-            <div class="plan-price">$15</div>
-            <p>Perfect for short-term viewing</p>
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+      <div class="container">
+        <div class="section-title">
+          <h3>Flexible Pricing Plans</h3>
+          <p>Choose the perfect plan for your entertainment needs</p>
+        </div>
+        <div class="plans-grid">
+          <!-- 3 Months Plan -->
+          <div class="plan-card">
+            <div class="plan-header">
+              <h3>3 Months</h3>
+              <div class="plan-price">$15</div>
+              <p>Perfect for short-term viewing</p>
+            </div>
+            <div class="plan-details">
+              <ul class="plan-features">
+                <li><i class="fas fa-check"></i> 10,000+ Channels</li>
+                <li><i class="fas fa-check"></i> HD & 4K Quality</li>
+                <li><i class="fas fa-check"></i> 30,000+ VOD</li>
+                <li><i class="fas fa-check"></i> 24/7 Support</li>
+                <li><i class="fas fa-check"></i> 3 Devices</li>
+              </ul>
+              <div class="paypal-form">
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                  <input type="hidden" name="cmd" value="_xclick">
+                  <input type="hidden" name="business" value="boutghradm@gmail.com">
+                  <input type="hidden" name="item_name" value="NextView IPTV - 3 Months Subscription">
+                  <input type="hidden" name="amount" value="15.00">
+                  <input type="hidden" name="currency_code" value="USD">
+                  <input type="hidden" name="no_shipping" value="1">
+                  <input type="hidden" name="return" value="thanks.html">
+                  <input type="hidden" name="cancel_return" value="cancel.html">
+                  <input type="submit" value="Buy Now with PayPal" class="btn btn-primary">
+                </form>
+                <div class="paypal-email">
+                  Payments to: boutghradm@gmail.com
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="plan-details">
-            <ul class="plan-features">
-              <li><i class="fas fa-check"></i> 10,000+ Channels</li>
-              <li><i class="fas fa-check"></i> HD & 4K Quality</li>
-              <li><i class="fas fa-check"></i> 30,000+ VOD</li>
-              <li><i class="fas fa-check"></i> 24/7 Support</li>
-              <li><i class="fas fa-check"></i> 3 Devices</li>
-            </ul>
-            <div class="paypal-form">
-              <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-                <input type="hidden" name="cmd" value="_xclick">
-                <input type="hidden" name="business" value="boutghradm@gmail.com">
-                <input type="hidden" name="item_name" value="NextView IPTV - 3 Months Subscription">
-                <input type="hidden" name="amount" value="15.00">
-                <input type="hidden" name="currency_code" value="USD">
-                <input type="hidden" name="no_shipping" value="1">
-                <input type="hidden" name="return" value="https://yourdomain.com/thanks.html">
-                <input type="hidden" name="cancel_return" value="https://yourdomain.com/cancel.html">
-                <input type="submit" value="Buy Now with PayPal" class="btn btn-primary">
-              </form>
-              <div class="paypal-email">
-                Payments to: boutghradm@gmail.com
+          
+          <!-- 6 Months Plan -->
+          <div class="plan-card popular">
+            <div class="plan-header">
+              <h3>6 Months</h3>
+              <div class="plan-price">$25</div>
+              <p>Best value package</p>
+            </div>
+            <div class="plan-details">
+              <ul class="plan-features">
+                <li><i class="fas fa-check"></i> 15,000+ Channels</li>
+                <li><i class="fas fa-check"></i> HD & 4K Quality</li>
+                <li><i class="fas fa-check"></i> 50,000+ VOD</li>
+                <li><i class="fas fa-check"></i> Premium Support</li>
+                <li><i class="fas fa-check"></i> 5 Devices</li>
+                <li><i class="fas fa-check"></i> Catch-up TV</li>
+              </ul>
+              <div class="paypal-form">
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                  <input type="hidden" name="cmd" value="_xclick">
+                  <input type="hidden" name="business" value="boutghradm@gmail.com">
+                  <input type="hidden" name="item_name" value="NextView IPTV - 6 Months Subscription">
+                  <input type="hidden" name="amount" value="25.00">
+                  <input type="hidden" name="currency_code" value="USD">
+                  <input type="hidden" name="no_shipping" value="1">
+                  <input type="hidden" name="return" value="thanks.html">
+                  <input type="hidden" name="cancel_return" value="cancel.html">
+                  <input type="submit" value="Buy Now with PayPal" class="btn btn-primary">
+                </form>
+                <div class="paypal-email">
+                  Payments to: boutghradm@gmail.com
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 12 Months Plan -->
+          <div class="plan-card">
+            <div class="plan-header">
+              <h3>12 Months</h3>
+              <div class="plan-price">$35</div>
+              <p>Ultimate entertainment package</p>
+            </div>
+            <div class="plan-details">
+              <ul class="plan-features">
+                <li><i class="fas fa-check"></i> 20,000+ Channels</li>
+                <li><i class="fas fa-check"></i> HD & 4K Quality</li>
+                <li><i class="fas fa-check"></i> 80,000+ VOD</li>
+                <li><i class="fas fa-check"></i> Priority Support</li>
+                <li><i class="fas fa-check"></i> 8 Devices</li>
+                <li><i class="fas fa-check"></i> Catch-up TV</li>
+                <li><i class="fas fa-check"></i> Exclusive Channels</li>
+              </ul>
+              <div class="paypal-form">
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                  <input type="hidden" name="cmd" value="_xclick">
+                  <input type="hidden" name="business" value="boutghradm@gmail.com">
+                  <input type="hidden" name="item_name" value="NextView IPTV - 12 Months Subscription">
+                  <input type="hidden" name="amount" value="35.00">
+                  <input type="hidden" name="currency_code" value="USD">
+                  <input type="hidden" name="no_shipping" value="1">
+                  <input type="hidden" name="return" value="thanks.html">
+                  <input type="hidden" name="cancel_return" value="cancel.html">
+                  <input type="submit" value="Buy Now with PayPal" class="btn btn-primary">
+                </form>
+                <div class="paypal-email">
+                  Payments to: boutghradm@gmail.com
+                </div>
               </div>
             </div>
           </div>
         </div>
-        
-        <!-- 6 Months Plan -->
-        <div class="plan-card popular">
-          <div class="plan-header">
-            <h3>6 Months</h3>
-            <div class="plan-price">$25</div>
-            <p>Best value package</p>
+      </div>
+    </section>
+
+    <!-- Payment Section -->
+    <section class="payment-section">
+      <div class="container">
+        <div class="section-title">
+          <h3>Secure Payment Methods</h3>
+          <p>We offer safe and secure payment options for your convenience</p>
+        </div>
+        <div class="payment-methods">
+          <div class="payment-method">
+            <i class="fab fa-paypal payment-icon"></i>
+            <h4>PayPal</h4>
+            <p>Safe and secure payment processing</p>
           </div>
-          <div class="plan-details">
-            <ul class="plan-features">
-              <li><i class="fas fa-check"></i> 15,000+ Channels</li>
-              <li><i class="fas fa-check"></i> HD & 4K Quality</li>
-              <li><i class="fas fa-check"></i> 50,000+ VOD</li>
-              <li><i class="fas fa-check"></i> Premium Support</li>
-              <li><i class="fas fa-check"></i> 5 Devices</li>
-              <li><i class="fas fa-check"></i> Catch-up TV</li>
-            </ul>
-            <div class="paypal-form">
-              <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-                <input type="hidden" name="cmd" value="_xclick">
-                <input type="hidden" name="business" value="boutghradm@gmail.com">
-                <input type="hidden" name="item_name" value="NextView IPTV - 6 Months Subscription">
-                <input type="hidden" name="amount" value="25.00">
-                <input type="hidden" name="currency_code" value="USD">
-                <input type="hidden" name="no_shipping" value="1">
-                <input type="hidden" name="return" value="https://yourdomain.com/thanks.html">
-                <input type="hidden" name="cancel_return" value="https://yourdomain.com/cancel.html">
-                <input type="submit" value="Buy Now with PayPal" class="btn btn-primary">
-              </form>
-              <div class="paypal-email">
-                Payments to: boutghradm@gmail.com
+          <div class="payment-method">
+            <i class="fab fa-cc-visa payment-icon" style="color: #1a1f71;"></i>
+            <h4>Credit/Debit Cards</h4>
+            <p>Visa, Mastercard, American Express</p>
+          </div>
+          <div class="payment-method">
+            <i class="fab fa-bitcoin payment-icon" style="color: #f2a900;"></i>
+            <h4>Cryptocurrency</h4>
+            <p>Bitcoin, Ethereum, USDT</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WhatsApp Section -->
+    <section class="whatsapp-section">
+      <div class="container">
+        <div class="whatsapp-container">
+          <h2>24/7 Customer Support</h2>
+          <p>Our team is always ready to assist you with any questions or issues you may have. Contact us directly on WhatsApp for instant support.</p>
+          <a href="https://wa.me/212644680614" class="whatsapp-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i> Chat with us on WhatsApp: +212644680614
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+      <div class="container">
+        <div class="section-title">
+          <h3>What Our Customers Say</h3>
+          <p>Join thousands of satisfied customers worldwide</p>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">MJ</div>
+              <div class="testimonial-info">
+                <h4>Mohamed J.</h4>
+                <p>Premium Subscriber</p>
               </div>
             </div>
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p>"The picture quality is exceptional and the channel selection is massive. Customer service is responsive and helpful. Highly recommended!"</p>
           </div>
-        </div>
-        
-        <!-- 12 Months Plan -->
-        <div class="plan-card">
-          <div class="plan-header">
-            <h3>12 Months</h3>
-            <div class="plan-price">$35</div>
-            <p>Ultimate entertainment package</p>
-          </div>
-          <div class="plan-details">
-            <ul class="plan-features">
-              <li><i class="fas fa-check"></i> 20,000+ Channels</li>
-              <li><i class="fas fa-check"></i> HD & 4K Quality</li>
-              <li><i class="fas fa-check"></i> 80,000+ VOD</li>
-              <li><i class="fas fa-check"></i> Priority Support</li>
-              <li><i class="fas fa-check"></i> 8 Devices</li>
-              <li><i class="fas fa-check"></i> Catch-up TV</li>
-              <li><i class="fas fa-check"></i> Exclusive Channels</li>
-            </ul>
-            <div class="paypal-form">
-              <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-                <input type="hidden" name="cmd" value="_xclick">
-                <input type="hidden" name="business" value="boutghradm@gmail.com">
-                <input type="hidden" name="item_name" value="NextView IPTV - 12 Months Subscription">
-                <input type="hidden" name="amount" value="35.00">
-                <input type="hidden" name="currency_code" value="USD">
-                <input type="hidden" name="no_shipping" value="1">
-                <input type="hidden" name="return" value="https://yourdomain.com/thanks.html">
-                <input type="hidden" name="cancel_return" value="https://yourdomain.com/cancel.html">
-                <input type="submit" value="Buy Now with PayPal" class="btn btn-primary">
-              </form>
-              <div class="paypal-email">
-                Payments to: boutghradm@gmail.com
+          
+          <div class="testimonial">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">AS</div>
+              <div class="testimonial-info">
+                <h4>Aisha S.</h4>
+                <p>Family Plan User</p>
               </div>
             </div>
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p>"We've been using NextView for 6 months now and it's been flawless. The multi-device support is perfect for our family. Great value for money!"</p>
+          </div>
+          
+          <div class="testimonial">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">RK</div>
+              <div class="testimonial-info">
+                <h4>Robert K.</h4>
+                <p>Sports Enthusiast</p>
+              </div>
+            </div>
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p>"As a sports fan, I'm blown away by the coverage. All major leagues, HD quality with no buffering. The 4K sports channels are amazing!"</p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Payment Section -->
-  <section class="payment-section">
-    <div class="container">
-      <div class="section-title">
-        <h3>Secure Payment Methods</h3>
-        <p>We offer safe and secure payment options for your convenience</p>
-      </div>
-      <div class="payment-methods">
-        <div class="payment-method">
-          <i class="fab fa-paypal payment-icon"></i>
-          <h4>PayPal</h4>
-          <p>Safe and secure payment processing</p>
+    <!-- FAQ Section -->
+    <section class="faq">
+      <div class="container">
+        <div class="section-title">
+          <h3>Frequently Asked Questions</h3>
+          <p>Find answers to common questions about our service</p>
         </div>
-        <div class="payment-method">
-          <i class="fab fa-cc-visa payment-icon" style="color: #1a1f71;"></i>
-          <h4>Credit/Debit Cards</h4>
-          <p>Visa, Mastercard, American Express</p>
-        </div>
-        <div class="payment-method">
-          <i class="fab fa-bitcoin payment-icon" style="color: #f2a900;"></i>
-          <h4>Cryptocurrency</h4>
-          <p>Bitcoin, Ethereum, USDT</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WhatsApp Section -->
-  <section class="whatsapp-section">
-    <div class="container">
-      <div class="whatsapp-container">
-        <h2>24/7 Customer Support</h2>
-        <p>Our team is always ready to assist you with any questions or issues you may have. Contact us directly on WhatsApp for instant support.</p>
-        <a href="https://wa.me/212644680614" class="whatsapp-btn" target="_blank">
-          <i class="fab fa-whatsapp"></i> Chat with us on WhatsApp: +212644680614
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials Section -->
-  <section class="testimonials">
-    <div class="container">
-      <div class="section-title">
-        <h3>What Our Customers Say</h3>
-        <p>Join thousands of satisfied customers worldwide</p>
-      </div>
-      <div class="testimonials-grid">
-        <div class="testimonial">
-          <div class="testimonial-header">
-            <div class="testimonial-avatar">MJ</div>
-            <div class="testimonial-info">
-              <h4>Mohamed J.</h4>
-              <p>Premium Subscriber</p>
+        <div class="faq-container">
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>What devices are supported?</span>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>NextView IPTV works on all major devices including Smart TVs (Samsung, LG, Android TV), set-top boxes (Formuler, MAG), streaming devices (Amazon Fire Stick, NVIDIA Shield), mobile devices (Android, iOS), and computers (Windows, Mac).</p>
             </div>
           </div>
-          <div class="testimonial-rating">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-          </div>
-          <p>"The picture quality is exceptional and the channel selection is massive. Customer service is responsive and helpful. Highly recommended!"</p>
-        </div>
-        
-        <div class="testimonial">
-          <div class="testimonial-header">
-            <div class="testimonial-avatar">AS</div>
-            <div class="testimonial-info">
-              <h4>Aisha S.</h4>
-              <p>Family Plan User</p>
+          
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>How quickly will I get access after payment?</span>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>We provide instant activation for most payment methods. You'll typically receive your login credentials within 5-10 minutes after payment confirmation. For PayPal payments, activation is immediate upon successful payment.</p>
             </div>
           </div>
-          <div class="testimonial-rating">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star-half-alt"></i>
-          </div>
-          <p>"We've been using NextView for 6 months now and it's been flawless. The multi-device support is perfect for our family. Great value for money!"</p>
-        </div>
-        
-        <div class="testimonial">
-          <div class="testimonial-header">
-            <div class="testimonial-avatar">RK</div>
-            <div class="testimonial-info">
-              <h4>Robert K.</h4>
-              <p>Sports Enthusiast</p>
+          
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>What payment methods do you accept?</span>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>We accept all major credit/debit cards through PayPal. We also accept direct bank transfers and cryptocurrency (Bitcoin, Ethereum) for added privacy. Contact us for alternative payment options.</p>
             </div>
           </div>
-          <div class="testimonial-rating">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
+          
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Do you offer free trials?</span>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>We offer a 24-hour trial for $1 to verify our service quality and compatibility with your devices. This nominal fee helps prevent abuse of our trial system while giving you full access to evaluate our service.</p>
+            </div>
           </div>
-          <p>"As a sports fan, I'm blown away by the coverage. All major leagues, HD quality with no buffering. The 4K sports channels are amazing!"</p>
+          
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>How can I contact customer support?</span>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>Our customer support team is available 24/7 via WhatsApp at +212644680614. You can also reach us by email at support@nextviewiptv.com. Average response time is under 15 minutes during peak hours.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <!-- About Us Page -->
+  <section id="about" class="page-content" style="display:none;">
+    <div class="container">
+      <div class="page-header">
+        <h2>About NextView IPTV</h2>
+        <p>Learn about our mission, vision, and the team behind your premium streaming experience</p>
+      </div>
+      
+      <div class="page-section">
+        <h2>Our Story</h2>
+        <p>Founded in 2020, NextView IPTV began with a simple mission: to revolutionize television streaming by providing high-quality content at affordable prices. What started as a small team of streaming enthusiasts has grown into a leading IPTV service provider with thousands of satisfied customers worldwide.</p>
+        <p>We recognized the limitations of traditional cable TV - high costs, rigid schedules, and limited content. Our vision was to create a service that gives you complete control over your viewing experience, with access to global content anytime, anywhere.</p>
+      </div>
+      
+      <div class="page-section">
+        <h2>Our Mission</h2>
+        <p>At NextView IPTV, we're committed to:</p>
+        <ul>
+          <li>Delivering the highest quality streaming experience with minimal buffering</li>
+          <li>Providing the most comprehensive channel lineup at unbeatable prices</li>
+          <li>Ensuring 24/7 customer support through multiple channels</li>
+          <li>Continuously expanding our content library with new channels and VOD</li>
+          <li>Maintaining transparency in all our operations and pricing</li>
+        </ul>
+      </div>
+      
+      <div class="page-section">
+        <h2>Why Choose Us</h2>
+        <div class="features-grid">
+          <div class="feature-box">
+            <div class="feature-icon">
+              <i class="fas fa-server"></i>
+            </div>
+            <h4>Robust Infrastructure</h4>
+            <p>Our state-of-the-art servers ensure 99.9% uptime and buffer-free streaming even during peak hours.</p>
+          </div>
+          <div class="feature-box">
+            <div class="feature-icon">
+              <i class="fas fa-globe"></i>
+            </div>
+            <h4>Global Content</h4>
+            <p>Access channels from over 50 countries, including premium sports, movies, news, and entertainment.</p>
+          </div>
+          <div class="feature-box">
+            <div class="feature-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h4>Secure & Private</h4>
+            <p>Your privacy is our priority. We don't track your viewing habits or share your data with third parties.</p>
+          </div>
+          <div class="feature-box">
+            <div class="feature-icon">
+              <i class="fas fa-sync"></i>
+            </div>
+            <h4>Continuous Updates</h4>
+            <p>We add new channels and features weekly based on customer feedback and industry trends.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="page-section">
+        <h2>Meet Our Team</h2>
+        <div class="features-grid">
+          <div class="feature-box">
+            <div class="feature-icon">
+              <i class="fas fa-user"></i>
+            </div>
+            <h4>Karim B.</h4>
+            <p>Founder & CEO</p>
+            <p>15+ years in streaming technology</p>
+          </div>
+          <div class="feature-box">
+            <div class="feature-icon">
+              <i class="fas fa-user"></i>
+            </div>
+            <h4>Amine T.</h4>
+            <p>Technical Director</p>
+            <p>Infrastructure and server management</p>
+          </div>
+          <div class="feature-box">
+            <div class="feature-icon">
+              <i class="fas fa-user"></i>
+            </div>
+            <h4>Fatima Z.</h4>
+            <p>Content Manager</p>
+            <p>Channel acquisition and curation</p>
+          </div>
+          <div class="feature-box">
+            <div class="feature-icon">
+              <i class="fas fa-user"></i>
+            </div>
+            <h4>Youssef K.</h4>
+            <p>Customer Support Lead</p>
+            <p>Ensuring premium customer experience</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FAQ Section -->
-  <section class="faq">
+  <!-- Privacy Policy Page -->
+  <section id="privacy" class="page-content" style="display:none;">
     <div class="container">
-      <div class="section-title">
-        <h3>Frequently Asked Questions</h3>
-        <p>Find answers to common questions about our service</p>
+      <div class="page-header">
+        <h2>Privacy Policy</h2>
+        <p>Your privacy is important to us. Learn how we collect, use, and protect your information</p>
       </div>
-      <div class="faq-container">
-        <div class="faq-item">
-          <div class="faq-question">
-            <span>What devices are supported?</span>
-            <i class="fas fa-chevron-down"></i>
+      
+      <div class="page-section">
+        <h2>Information Collection</h2>
+        <p>We collect information to provide better services to all our users. The types of information we collect include:</p>
+        <ul>
+          <li><strong>Account Information:</strong> When you create an account, we collect your name, email address, and payment information.</li>
+          <li><strong>Device Information:</strong> We collect device-specific information such as your hardware model and operating system.</li>
+          <li><strong>Usage Information:</strong> We collect information about how you use our services, including channels viewed and time spent.</li>
+          <li><strong>Location Information:</strong> With your permission, we may collect information about your location to provide location-based content.</li>
+        </ul>
+      </div>
+      
+      <div class="page-section">
+        <h2>How We Use Information</h2>
+        <p>We use the information we collect for the following purposes:</p>
+        <ul>
+          <li>To provide, maintain, and improve our services</li>
+          <li>To process transactions and send transaction notifications</li>
+          <li>To personalize your experience and content recommendations</li>
+          <li>To communicate with you about products, services, and promotions</li>
+          <li>To detect, prevent, and address technical issues</li>
+          <li>To comply with legal obligations</li>
+        </ul>
+      </div>
+      
+      <div class="page-section">
+        <h2>Information Sharing</h2>
+        <p>We do not share your personal information with companies, organizations, or individuals outside of NextView IPTV except in the following cases:</p>
+        <ul>
+          <li><strong>With your consent:</strong> We will share personal information with third parties when we have your explicit consent.</li>
+          <li><strong>For external processing:</strong> We provide information to our affiliates and other trusted businesses to process it for us, based on our instructions and in compliance with our Privacy Policy.</li>
+          <li><strong>For legal reasons:</strong> We will share personal information if we believe in good faith that access, use, preservation, or disclosure is reasonably necessary to meet applicable laws or regulations.</li>
+        </ul>
+      </div>
+      
+      <div class="page-section">
+        <h2>Data Security</h2>
+        <p>We implement appropriate technical and organizational measures to protect your personal information against accidental or unlawful destruction, loss, alteration, unauthorized disclosure, or access.</p>
+        <p>These measures include:</p>
+        <ul>
+          <li>Encryption of data in transit using SSL/TLS technology</li>
+          <li>Secure storage of payment information using tokenization</li>
+          <li>Regular security audits and vulnerability testing</li>
+          <li>Access controls to personal information</li>
+        </ul>
+      </div>
+      
+      <div class="page-section">
+        <h2>Your Rights</h2>
+        <p>You have the following rights regarding your personal information:</p>
+        <ul>
+          <li><strong>Access:</strong> You can request copies of your personal data.</li>
+          <li><strong>Rectification:</strong> You can request correction of inaccurate personal data.</li>
+          <li><strong>Erasure:</strong> You can request deletion of your personal data.</li>
+          <li><strong>Restriction:</strong> You can request restriction of processing of your personal data.</li>
+          <li><strong>Data portability:</strong> You can request transfer of your data to another organization.</li>
+          <li><strong>Objection:</strong> You can object to processing of your personal data.</li>
+        </ul>
+        <p>To exercise any of these rights, please contact us at privacy@nextviewiptv.com.</p>
+      </div>
+      
+      <div class="page-section">
+        <h2>Changes to This Policy</h2>
+        <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date below.</p>
+        <p>You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
+        <p><strong>Last updated:</strong> June 25, 2025</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Terms of Service Page -->
+  <section id="terms" class="page-content" style="display:none;">
+    <div class="container">
+      <div class="page-header">
+        <h2>Terms of Service</h2>
+        <p>Please read these terms carefully before using our service</p>
+      </div>
+      
+      <div class="page-section">
+        <h2>Acceptance of Terms</h2>
+        <p>By accessing or using the NextView IPTV service ("Service"), you agree to be bound by these Terms of Service ("Terms"). If you disagree with any part of the terms, you may not access the Service.</p>
+      </div>
+      
+      <div class="page-section">
+        <h2>Service Description</h2>
+        <p>NextView IPTV provides internet protocol television services, including access to live TV channels, video on demand (VOD), and other related content ("Content"). The Service is provided on a subscription basis.</p>
+        <p>We reserve the right to modify, suspend, or discontinue the Service (or any part of it) at any time with or without notice.</p>
+      </div>
+      
+      <div class="page-section">
+        <h2>Subscription and Payment</h2>
+        <ul>
+          <li>Subscriptions are available in 3-month, 6-month, and 12-month plans.</li>
+          <li>All subscription fees are non-refundable except as required by law or as specifically provided in these Terms.</li>
+          <li>We may change subscription fees at any time, but will provide you with advance notice of these changes.</li>
+          <li>Your subscription will automatically renew at the end of each subscription period unless you cancel before the renewal date.</li>
+        </ul>
+      </div>
+      
+      <div class="page-section">
+        <h2>User Responsibilities</h2>
+        <p>As a user of the Service, you agree:</p>
+        <ul>
+          <li>To use the Service only for personal, non-commercial purposes</li>
+          <li>Not to share your account credentials with others</li>
+          <li>Not to resell, redistribute, or rebroadcast any Content</li>
+          <li>Not to reverse engineer, decompile, or disassemble any part of the Service</li>
+          <li>Not to use the Service for any illegal purpose</li>
+          <li>To comply with all applicable laws and regulations</li>
+        </ul>
+      </div>
+      
+      <div class="page-section">
+        <h2>Content Rights</h2>
+        <p>All Content provided through the Service is protected by copyright, trademark, and other intellectual property laws. You may not copy, distribute, modify, transmit, reuse, download, repost, or use any Content for commercial purposes without express written permission from the Content owner.</p>
+        <p>NextView IPTV does not claim ownership of any third-party Content accessible through the Service.</p>
+      </div>
+      
+      <div class="page-section">
+        <h2>Termination</h2>
+        <p>We may terminate or suspend your account immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms.</p>
+        <p>Upon termination, your right to use the Service will immediately cease. If you wish to terminate your account, you may simply discontinue using the Service or cancel your subscription through your account settings.</p>
+      </div>
+      
+      <div class="page-section">
+        <h2>Disclaimer of Warranties</h2>
+        <p>The Service is provided "AS IS" and "AS AVAILABLE" without warranties of any kind, either express or implied, including, but not limited to, implied warranties of merchantability, fitness for a particular purpose, or non-infringement.</p>
+        <p>We do not warrant that the Service will be uninterrupted, secure, or error-free; that defects will be corrected; or that the Service is free of viruses or other harmful components.</p>
+      </div>
+      
+      <div class="page-section">
+        <h2>Limitation of Liability</h2>
+        <p>In no event shall NextView IPTV, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from:</p>
+        <ul>
+          <li>Your access to or use of or inability to access or use the Service</li>
+          <li>Any conduct or content of any third party on the Service</li>
+          <li>Any content obtained from the Service</li>
+          <li>Unauthorized access, use or alteration of your transmissions or content</li>
+        </ul>
+      </div>
+      
+      <div class="page-section">
+        <h2>Governing Law</h2>
+        <p>These Terms shall be governed and construed in accordance with the laws of Morocco, without regard to its conflict of law provisions.</p>
+        <p>Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights.</p>
+      </div>
+      
+      <div class="page-section">
+        <h2>Changes to Terms</h2>
+        <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms.</p>
+        <p><strong>Last updated:</strong> June 25, 2025</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resources Page -->
+  <section id="resources" class="page-content" style="display:none;">
+    <div class="container">
+      <div class="page-header">
+        <h2>Resources</h2>
+        <p>Everything you need to get the most out of NextView IPTV</p>
+      </div>
+      
+      <div class="page-section">
+        <h2>Setup Guides</h2>
+        <div class="setup-steps">
+          <div class="setup-step">
+            <span class="step-number">1</span>
+            <h3>Fire TV Stick</h3>
+            <p>Step-by-step guide to install NextView IPTV on your Amazon Fire TV Stick:</p>
+            <ol>
+              <li>Enable installation from unknown sources</li>
+              <li>Download the IPTV Smarters app</li>
+              <li>Enter your account credentials</li>
+              <li>Organize your favorite channels</li>
+            </ol>
+            <a href="#setup" class="btn btn-primary">View Full Guide</a>
           </div>
-          <div class="faq-answer">
-            <p>NextView IPTV works on all major devices including Smart TVs (Samsung, LG, Android TV), set-top boxes (Formuler, MAG), streaming devices (Amazon Fire Stick, NVIDIA Shield), mobile devices (Android, iOS), and computers (Windows, Mac).</p>
+          
+          <div class="setup-step">
+            <span class="step-number">2</span>
+            <h3>Android TV</h3>
+            <p>How to set up NextView IPTV on your Android TV device:</p>
+            <ol>
+              <li>Install IPTV player from Play Store</li>
+              <li>Configure M3U playlist URL</li>
+              <li>Adjust player settings for optimal performance</li>
+              <li>Troubleshoot common issues</li>
+            </ol>
+            <a href="#setup" class="btn btn-primary">View Full Guide</a>
+          </div>
+          
+          <div class="setup-step">
+            <span class="step-number">3</span>
+            <h3>iOS Devices</h3>
+            <p>Complete guide for iPhone and iPad users:</p>
+            <ol>
+              <li>Install GSE Smart IPTV from App Store</li>
+              <li>Add Xtream Codes API details</li>
+              <li>Configure parental controls</li>
+              <li>Set up EPG for program guide</li>
+            </ol>
+            <a href="#setup" class="btn btn-primary">View Full Guide</a>
+          </div>
+          
+          <div class="setup-step">
+            <span class="step-number">4</span>
+            <h3>Smart TVs</h3>
+            <p>Setup instructions for Samsung, LG, and Sony Smart TVs:</p>
+            <ol>
+              <li>Install SS IPTV app</li>
+              <li>Upload M3U playlist</li>
+              <li>Configure remote control shortcuts</li>
+              <li>Optimize video quality settings</li>
+            </ol>
+            <a href="#setup" class="btn btn-primary">View Full Guide</a>
           </div>
         </div>
-        
-        <div class="faq-item">
-          <div class="faq-question">
-            <span>How quickly will I get access after payment?</span>
-            <i class="fas fa-chevron-down"></i>
+      </div>
+      
+      <div class="page-section">
+        <h2>Channel List</h2>
+        <div class="channel-grid">
+          <div class="channel-category">
+            <h3>Sports</h3>
+            <ul class="channel-list">
+              <li><i class="fas fa-tv"></i> Sky Sports Main Event</li>
+              <li><i class="fas fa-tv"></i> BT Sport 1</li>
+              <li><i class="fas fa-tv"></i> ESPN</li>
+              <li><i class="fas fa-tv"></i> BeIN Sports</li>
+              <li><i class="fas fa-tv"></i> NFL Network</li>
+              <li><i class="fas fa-tv"></i> NBA TV</li>
+              <li><i class="fas fa-tv"></i> Fox Sports</li>
+              <li><i class="fas fa-tv"></i> Eurosport 1</li>
+              <li><i class="fas fa-tv"></i> MLB Network</li>
+            </ul>
           </div>
-          <div class="faq-answer">
-            <p>We provide instant activation for most payment methods. You'll typically receive your login credentials within 5-10 minutes after payment confirmation. For PayPal payments, activation is immediate upon successful payment.</p>
+          
+          <div class="channel-category">
+            <h3>Entertainment</h3>
+            <ul class="channel-list">
+              <li><i class="fas fa-tv"></i> HBO</li>
+              <li><i class="fas fa-tv"></i> Showtime</li>
+              <li><i class="fas fa-tv"></i> Starz</li>
+              <li><i class="fas fa-tv"></i> AMC</li>
+              <li><i class="fas fa-tv"></i> FX</li>
+              <li><i class="fas fa-tv"></i> Comedy Central</li>
+              <li><i class="fas fa-tv"></i> National Geographic</li>
+              <li><i class="fas fa-tv"></i> Discovery Channel</li>
+              <li><i class="fas fa-tv"></i> History Channel</li>
+            </ul>
+          </div>
+          
+          <div class="channel-category">
+            <h3>Movies</h3>
+            <ul class="channel-list">
+              <li><i class="fas fa-tv"></i> HBO Movies</li>
+              <li><i class="fas fa-tv"></i> Cinemax</li>
+              <li><i class="fas fa-tv"></i> TCM</li>
+              <li><i class="fas fa-tv"></i> Film4</li>
+              <li><i class="fas fa-tv"></i> Sony Movies</li>
+              <li><i class="fas fa-tv"></i> MGM HD</li>
+              <li><i class="fas fa-tv"></i> Paramount Network</li>
+              <li><i class="fas fa-tv"></i> Star Movies</li>
+              <li><i class="fas fa-tv"></i> Movieplex</li>
+            </ul>
+          </div>
+          
+          <div class="channel-category">
+            <h3>News</h3>
+            <ul class="channel-list">
+              <li><i class="fas fa-tv"></i> CNN</li>
+              <li><i class="fas fa-tv"></i> BBC News</li>
+              <li><i class="fas fa-tv"></i> Fox News</li>
+              <li><i class="fas fa-tv"></i> MSNBC</li>
+              <li><i class="fas fa-tv"></i> Al Jazeera</li>
+              <li><i class="fas fa-tv"></i> CNBC</li>
+              <li><i class="fas fa-tv"></i> Sky News</li>
+              <li><i class="fas fa-tv"></i> France 24</li>
+              <li><i class="fas fa-tv"></i> Bloomberg</li>
+            </ul>
           </div>
         </div>
-        
-        <div class="faq-item">
-          <div class="faq-question">
-            <span>What payment methods do you accept?</span>
-            <i class="fas fa-chevron-down"></i>
+      </div>
+      
+      <div class="page-section">
+        <h2>Troubleshooting</h2>
+        <div class="troubleshooting-grid">
+          <div class="troubleshooting-card">
+            <h3>Buffering Issues</h3>
+            <p><strong>Solution:</strong> Check your internet connection speed. We recommend at least 15Mbps for HD streaming. Try reducing video quality in player settings or connect via Ethernet instead of WiFi.</p>
           </div>
-          <div class="faq-answer">
-            <p>We accept all major credit/debit cards through PayPal. We also accept direct bank transfers and cryptocurrency (Bitcoin, Ethereum) for added privacy. Contact us for alternative payment options.</p>
+          
+          <div class="troubleshooting-card">
+            <h3>Channels Not Loading</h3>
+            <p><strong>Solution:</strong> Restart your device and router. Ensure your subscription is active. If problem persists, clear cache of your IPTV player or try a different player app.</p>
+          </div>
+          
+          <div class="troubleshooting-card">
+            <h3>EPG Not Showing</h3>
+            <p><strong>Solution:</strong> Refresh EPG data in your player settings. Ensure you're using the correct EPG URL provided in your account dashboard. Update your IPTV player to the latest version.</p>
+          </div>
+          
+          <div class="troubleshooting-card">
+            <h3>Login Issues</h3>
+            <p><strong>Solution:</strong> Reset your password using the "Forgot Password" feature. Ensure you're using the correct username and password combination. Contact support if locked out.</p>
           </div>
         </div>
-        
-        <div class="faq-item">
-          <div class="faq-question">
-            <span>Do you offer free trials?</span>
-            <i class="fas fa-chevron-down"></i>
+      </div>
+      
+      <div class="page-section">
+        <h2>IPTV Blog</h2>
+        <div class="blog-grid">
+          <div class="blog-post">
+            <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1593784991095-a205069470b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');"></div>
+            <div class="blog-content">
+              <span class="blog-date">June 20, 2025</span>
+              <h3>How to Choose the Best IPTV Player for Your Device</h3>
+              <p class="blog-excerpt">Discover the top IPTV players for different devices and learn which one suits your viewing preferences best.</p>
+              <a href="#blog" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
           </div>
-          <div class="faq-answer">
-            <p>We offer a 24-hour trial for $1 to verify our service quality and compatibility with your devices. This nominal fee helps prevent abuse of our trial system while giving you full access to evaluate our service.</p>
+          
+          <div class="blog-post">
+            <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');"></div>
+            <div class="blog-content">
+              <span class="blog-date">June 15, 2025</span>
+              <h3>Top 10 Must-Have Features in an IPTV Service</h3>
+              <p class="blog-excerpt">Learn about essential features that separate premium IPTV services from mediocre ones.</p>
+              <a href="#blog" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          
+          <div class="blog-post">
+            <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1550009158-9ebf69173e03?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');"></div>
+            <div class="blog-content">
+              <span class="blog-date">June 10, 2025</span>
+              <h3>Cutting the Cord: How IPTV is Changing Television</h3>
+              <p class="blog-excerpt">Explore how IPTV technology is revolutionizing the way we consume television content worldwide.</p>
+              <a href="#blog" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
           </div>
         </div>
-        
-        <div class="faq-item">
-          <div class="faq-question">
-            <span>How can I contact customer support?</span>
-            <i class="fas fa-chevron-down"></i>
+      </div>
+      
+      <div class="page-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Can I use NextView IPTV on multiple devices?</span>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>Yes, depending on your subscription plan. Our 3-month plan allows 3 simultaneous connections, 6-month plan allows 5, and 12-month plan allows up to 8 devices at the same time.</p>
+            </div>
           </div>
-          <div class="faq-answer">
-            <p>Our customer support team is available 24/7 via WhatsApp at +212644680614. You can also reach us by email at support@nextviewiptv.com. Average response time is under 15 minutes during peak hours.</p>
+          
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Do you offer PPV events?</span>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>Yes, we offer all major Pay-Per-View events including boxing matches, UFC fights, and wrestling events at no additional cost to our premium subscribers.</p>
+            </div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>How often is your channel list updated?</span>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>We update our channel list weekly, adding new channels and removing those that are no longer available. We also take customer requests for specific channels.</p>
+            </div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Is there a contract or commitment?</span>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>No, there are no long-term contracts. You can cancel your subscription at any time, though we don't offer refunds for unused portions of your subscription period.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -1114,22 +1822,22 @@
         <div class="footer-links">
           <h4>Quick Links</h4>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="pricing.html">Pricing Plans</a></li>
-            <li><a href="privacy.html">Privacy Policy</a></li>
-            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#pricing">Pricing Plans</a></li>
+            <li><a href="#privacy">Privacy Policy</a></li>
+            <li><a href="#terms">Terms of Service</a></li>
           </ul>
         </div>
         
         <div class="footer-links">
           <h4>Resources</h4>
           <ul>
-            <li><a href="setup.html">Setup Guides</a></li>
-            <li><a href="channels.html">Channel List</a></li>
-            <li><a href="troubleshooting.html">Troubleshooting</a></li>
-            <li><a href="blog.html">IPTV Blog</a></li>
-            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="#resources">Setup Guides</a></li>
+            <li><a href="#resources">Channel List</a></li>
+            <li><a href="#resources">Troubleshooting</a></li>
+            <li><a href="#resources">IPTV Blog</a></li>
+            <li><a href="#resources">FAQ</a></li>
           </ul>
         </div>
         
@@ -1169,11 +1877,39 @@
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
+        const targetId = this.getAttribute('href');
+        
+        // Hide all page content sections
+        document.querySelectorAll('.page-content').forEach(section => {
+          section.style.display = 'none';
         });
+        
+        // Show the target section if it exists
+        const targetSection = document.querySelector(targetId);
+        if (targetSection && targetSection.classList.contains('page-content')) {
+          targetSection.style.display = 'block';
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        } 
+        // Regular anchor scrolling
+        else if (targetId !== '#') {
+          document.querySelector(targetId).scrollIntoView({
+            behavior: 'smooth'
+          });
+        }
       });
     });
+    
+    // Highlight active navigation link
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        navLinks.forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+    
+    // Initialize home page as visible
+    document.getElementById('home').style.display = 'block';
   </script>
 </body>
 </html>
